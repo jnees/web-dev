@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tiny Sprite Painter 8x8</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id='top-section' class='container'>
+    <h1>Tiny Sprite Painter 8x8</h1>
+  </div>
+  <div id='middle-section' class='container'>
+    <div id='canvas' class="flex-container">
+      <div id="row1" class='row'>
+        <div id="square1" class='col-1 square'></div>
+        <div id="square2" class='col-1 square'></div>
+        <div id="square3" class='col-1 square'></div>
+        <div id="square4" class='col-1 square'></div>
+        <div id="square5" class='col-1 square'></div>
+        <div id="square6" class='col-1 square'></div>
+        <div id="square7" class='col-1 square'></div>
+        <div id="square8" class='col-1 square'></div>
+      </div>
+      <div id="row2" class='row'>
+        <div id="square9" class='col-1 square'></div>
+        <div id="square10" class='col-1 square'></div>
+        <div id="square11" class='col-1 square'></div>
+        <div id="square12" class='col-1 square'></div>
+        <div id="square13" class='col-1 square'></div>
+        <div id="square14" class='col-1 square'></div>
+        <div id="square15" class='col-1 square'></div>
+        <div id="square16" class='col-1 square'></div>
+      </div>
+      <div id="row3" class='row'>
+        <div id="square17" class='col-1 square'></div>
+        <div id="square18" class='col-1 square'></div>
+        <div id="square19" class='col-1 square'></div>
+        <div id="square20" class='col-1 square'></div>
+        <div id="square21" class='col-1 square'></div>
+        <div id="square22" class='col-1 square'></div>
+        <div id="square23" class='col-1 square'></div>
+        <div id="square24" class='col-1 square'></div>
+      </div>
+      <div id="row4" class='row'>
+        <div id="square25" class='col-1 square'></div>
+        <div id="square26" class='col-1 square'></div>
+        <div id="square27" class='col-1 square'></div>
+        <div id="square28" class='col-1 square'></div>
+        <div id="square29" class='col-1 square'></div>
+        <div id="square30" class='col-1 square'></div>
+        <div id="square31" class='col-1 square'></div>
+        <div id="square32" class='col-1 square'></div>
+      </div>
+      <div id="row5" class='row'>
+        <div id="square33" class='col-1 square'></div>
+        <div id="square34" class='col-1 square'></div>
+        <div id="square35" class='col-1 square'></div>
+        <div id="square36" class='col-1 square'></div>
+        <div id="square37" class='col-1 square'></div>
+        <div id="square38" class='col-1 square'></div>
+        <div id="square39" class='col-1 square'></div>
+        <div id="square40" class='col-1 square'></div>
+      </div>
+      <div id="row6" class='row'>
+        <div id="square41" class='col-1 square'></div>
+        <div id="square42" class='col-1 square'></div>
+        <div id="square43" class='col-1 square'></div>
+        <div id="square44" class='col-1 square'></div>
+        <div id="square45" class='col-1 square'></div>
+        <div id="square46" class='col-1 square'></div>
+        <div id="square47" class='col-1 square'></div>
+        <div id="square48" class='col-1 square'></div>
+      </div>
+      <div id="row7" class='row'>
+        <div id="square49" class='col-1 square'></div>
+        <div id="square50" class='col-1 square'></div>
+        <div id="square51" class='col-1 square'></div>
+        <div id="square52" class='col-1 square'></div>
+        <div id="square53" class='col-1 square'></div>
+        <div id="square54" class='col-1 square'></div>
+        <div id="square55" class='col-1 square'></div>
+        <div id="square56" class='col-1 square'></div>
+      </div>
+      <div id="row8" class='row'>
+        <div id="square57" class='col-1 square'></div>
+        <div id="square58" class='col-1 square'></div>
+        <div id="square59" class='col-1 square'></div>
+        <div id="square60" class='col-1 square'></div>
+        <div id="square61" class='col-1 square'></div>
+        <div id="square62" class='col-1 square'></div>
+        <div id="square63" class='col-1 square'></div>
+        <div id="square64" class='col-1 square'></div>
+      </div>
+    </div>
+  </div>
+
+  <div id='bottom-section' class='container'>
+    <div id="pallette" class="container-flex">
+      <div class='row'>
+        <div id="red" class='col-2 color currentColor'></div>
+        <div id="pink" class='col-2 color'></div>
+        <div id="green" class='col-2 color'></div>
+        <div id="blue" class='col-2 color'></div>
+        <div id="cyan" class='col-2 color'></div>
+        <div id="purple" class='col-2 color'></div>
+        <div id="orange" class='col-2 color'></div>
+        <div id="yellow" class='col-2 color'></div>
+        <div id="brown" class='col-2 color'></div>
+        <div id="white" class='col-2 color'></div>
+        <div id="grey" class='col-2 color'></div>
+        <div id="black" class='col-2 color'></div>
+
+      </div>
+      <div class='row'>
+        <button id="fill" class='col-2 btn-default control'>Fill All</button>
+        <button id="clear" class='col-2 btn-default control'>Clear All</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer" class="container">
+    <div><br/>Created with ❤️in Seattle, WA</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
