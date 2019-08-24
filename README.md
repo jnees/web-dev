@@ -1,9 +1,15 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
+2. ## [TinySpritePainter (browswer painting app)](https://github.com/jnees/web-dev-for-fun/tree/master/TinySpritePainter)
+
+Create your low-res masterpiece in this 8x8 pixel art app.
+
+This project uses **html, css/bootstrap, and javascript/jquery**. I was inspired to build this app by my two-year old son who loves both art and trying to click the trackpad on my laptop.
+
 1. ## [Simon (browser game)](https://github.com/jnees/web-dev-for-fun/tree/master/Simon)
 
-Are you a master of memorization? Do you have Total Recall? Baby, you'll wish you had three brains in this classic memory challenge. Watch the computer display a series of colors, then repeat the buttons back in the same order to advance to the next level.
+Are you a master of memorization? Do you have 'total recall'? Baby, you'll wish you had three brains in this classic memory challenge. Watch the computer display a series of colors, then repeat the buttons back in the same order to advance to the next level.
 
 This project uses **html, css and javascript/jquery** and was inspired by the jquery 'boss level challenge' in [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 
