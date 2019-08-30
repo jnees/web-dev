@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bitcoin Conversion</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+  <div class='main'>
+    <h1>Coin Price Conversion</h1>
+    <form action="/" method="post" class="form-inline">
+      <label class="sr-only">Quantity</label>
+      <input type="text" class="form-control mb-2 mr-sm-2" name="amount" placeholder="Quantity">
+
+      <div class="input-group mb-2 mr-sm-2">
+        <select class="custom-select my-1 mr-sm-2" name="crypto">
+          <option selected value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
+          <option value="LTC">Litecoins</option>
+        </select>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2">
+        <select class="custom-select my-1 mr-sm-2" name="fiat">
+          <option selected value="USD">US Dollars</option>
+          <option value="GBP">GB Pounds</option>
+          <option value="EUR">Euros</option>
+        </select>
+      </div>
+
+      <button type="submit" name="check" class="btn btn-primary mb-2">Convert</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
