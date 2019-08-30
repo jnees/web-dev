@@ -1,11 +1,15 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-3. ## [Crypto-Converter]()
+3. ## [Crypto-Converter](https://github.com/jnees/web-dev-for-fun/tree/master/Bitcoin-Ticker)
 
 This web app lets you get the latest price quote for Bitcoin/Ethereum/Litecoins and convert to USD/GBP/EUR. Enter the number of coins that you want to convert and select the crypto and fiat currencies that you would like to see.
 
-This project uses HTML/CSS/Bootstrap on the front end and JS/Express/Node on the backend. It was originally derived from a tutorial in [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
+This project uses HTML/CSS/Bootstrap on the front end and JS/Node/Express on the backend. This runs locally on port 3000 and requires express body-parser. The app connects to the BitcoinAverage API using Request. 
+
+$npm install express body-parser request
+
+It was originally derived from a tutorial in [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 
 2. ## [TinySpritePainter (browswer painting app)](https://github.com/jnees/web-dev-for-fun/tree/master/TinySpritePainter)
 
