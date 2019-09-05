@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>One Player Pong!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+    <div id='top-section' class='container-fluid'>
+      <h1>Score</1>
+      <h2 id="score-board">0</h2>
+    </div>
+    <div id='game-section' class='container-fluid'>
+      <div class='row'>
+        <div id='left-section' class='col-3'>
+          <p>Shop</p>
+          <ul id='shop-list'>
+            <li>"S"  5g: Slower Ball</li>
+            <li>"W" 10g: Wider Paddle</li>
+            <li>"F" 20g: Faster Paddle</li>
+            <li>"I 30g: +1% Interest"</li>
+            <li>"M" 50g: Multi-ball</li>
+          </ul>
+          <br>
+          <p id="currentBalance">Bank: 0</p>
+        </div>
+        <div id='right-section' class='col-8'>
+          <canvas id="myCanvas" width="700" height="500"></canvas>
+        </div>
+      </div>
+      </div>
+
+
+    <script src="app-1.js" charset="utf-8"></script>
+  </body>
+</html>
