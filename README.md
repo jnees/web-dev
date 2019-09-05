@@ -15,7 +15,7 @@ This project uses HTML/CSS/Bootstrap on the front end and JS/Node/Express on the
 
 $npm install express body-parser request
 
-2. ## [TinySpritePainter (browswer painting app)](https://github.com/jnees/web-dev-for-fun/tree/master/TinySpritePainter)
+2. ## [TinySpritePainter](https://github.com/jnees/web-dev-for-fun/tree/master/TinySpritePainter) (browswer painting app)
 
 Create your low-res masterpiece in this 8x8 pixel art app.
 
