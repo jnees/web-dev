@@ -17,7 +17,7 @@ paddleX = (canvas.width - paddleWidth)/2;
 paddleGap = 0;
 
 // paddle movement
-var paddleDx = 5;
+var paddleDx = 6;
 
 var leftPressed;
 var rightPressed;
@@ -101,13 +101,13 @@ function buyWiderPaddle() {
     currentBalance -= 5;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
-    paddleWidth += 25;
+    paddleWidth += 35;
   }
 }
 
 function buyFasterPaddle() {
-  if (currentBalance >= 14){
-    currentBalance -= 14;
+  if (currentBalance >= 12){
+    currentBalance -= 12;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
     paddleDx += 3;
@@ -115,8 +115,8 @@ function buyFasterPaddle() {
 }
 
 function buyInterestRate() {
-  if (currentBalance >= 18){
-    currentBalance -= 18;
+  if (currentBalance >= 15){
+    currentBalance -= 15;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
     interestRate += 1;
@@ -143,7 +143,7 @@ function drawPaddle() {
 }
 
 function shrinkPaddle() {
-  if (paddleWidth > 25) {
+  if (paddleWidth > 70) {
     paddleWidth -= 1;
   }
 }
@@ -175,7 +175,7 @@ function gameOver() {
   // TimeOut/Reset
   setTimeout(function() {
     location.reload();
-  }, 2000);
+  }, 2400);
 }
 
 // Main Loop
