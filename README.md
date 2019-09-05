@@ -21,7 +21,7 @@ Create your low-res masterpiece in this 8x8 pixel art app.
 
 This project uses **html, css/bootstrap, and javascript/jquery**. I was inspired to build this app by my two-year old son who loves both art and trying to click the trackpad on my laptop.
 
-1. ## [Simon (browser game)](https://github.com/jnees/web-dev-for-fun/tree/master/Simon)
+1. ## [Simon](https://github.com/jnees/web-dev-for-fun/tree/master/Simon) (browser game)
 
 Are you a master of memorization? Do you have 'total recall'? You'll wish you had three brains in this classic memory challenge. Watch the computer display a series of colors, then repeat the buttons back in the same order to advance to the next level.
 
