@@ -17,7 +17,7 @@ paddleX = (canvas.width - paddleWidth)/2;
 paddleGap = 0;
 
 // paddle movement
-var paddleDx = 7;
+var paddleDx = 5;
 
 var leftPressed;
 var rightPressed;
@@ -29,6 +29,22 @@ function keyDownHandler(event) {
   }
   else if (event.keyCode == 37) {
     leftPressed = true;
+  }
+
+  if(event.keyCode == 83) {
+    buySlow();
+  }
+
+  if(event.keyCode == 70) {
+    buyFasterPaddle();
+  }
+
+  if(event.keyCode == 87){
+    buyWiderPaddle();
+  }
+
+  if(event.keyCode == 84){
+    buyInterestRate();
   }
 }
 
@@ -53,12 +69,61 @@ function scoreUpdate() {
 }
 
 // Cash Management
-function updateCash(){
-  var interestEarned = currentBalance * interestRate;
-  currentBalance = parseFloat(currentBalance + interestEarned + 1);
-  currentBalance = parseFloat(currentBalance.toFixed(2));
+
+function displayBalance(){
   document.getElementById("currentBalance").innerText = "Bank: " + currentBalance;
 }
+
+function displayInterest() {
+  document.getElementById("interestRate").innerText = "Interest Rate: " + interestRate + "%";
+}
+
+function updateCash(){
+  var interestEarned = currentBalance * (interestRate/100);
+  currentBalance = parseFloat(currentBalance + interestEarned + 1);
+  currentBalance = parseFloat(currentBalance.toFixed(2));
+  displayBalance();
+}
+
+// Shopping functions
+function buySlow(){
+  if (currentBalance >= 7){
+    currentBalance -= 7;
+    currentBalance = parseFloat(currentBalance.toFixed(2));
+    displayBalance();
+    dx *= 0.65;
+    dy *= 0.65;
+  }
+}
+
+function buyWiderPaddle() {
+  if (currentBalance >= 5){
+    currentBalance -= 5;
+    currentBalance = parseFloat(currentBalance.toFixed(2));
+    displayBalance();
+    paddleWidth += 25;
+  }
+}
+
+function buyFasterPaddle() {
+  if (currentBalance >= 14){
+    currentBalance -= 14;
+    currentBalance = parseFloat(currentBalance.toFixed(2));
+    displayBalance();
+    paddleDx += 3;
+  }
+}
+
+function buyInterestRate() {
+  if (currentBalance >= 18){
+    currentBalance -= 18;
+    currentBalance = parseFloat(currentBalance.toFixed(2));
+    displayBalance();
+    interestRate += 1;
+    displayInterest();
+  }
+}
+
 
 // Rendering
 function drawBall() {
@@ -75,6 +140,12 @@ function drawPaddle() {
    ctx.fillStyle = "red";
    ctx.fill();
    ctx.closePath();
+}
+
+function shrinkPaddle() {
+  if (paddleWidth > 25) {
+    paddleWidth -= 1;
+  }
 }
 
 // Visual Effects
@@ -144,8 +215,8 @@ function draw() {
       console.log(dy);
       console.log(dx);
 
-      // speed up paddle
-      paddleDx = 5 + (score / 3);
+      // Shrink paddle
+      shrinkPaddle();
 
       // calculate cash currentBalance
       updateCash();
@@ -182,7 +253,10 @@ function draw() {
 var score = 0;
 var scorePossible = true;
 var currentBalance = 0;
-document.getElementById("currentBalance").innerText = "Bank: " + currentBalance;
-var interestRate = 0.01;
+var interestRate = 1;
+var totalGoldEarned = 0;
+displayBalance();
+displayInterest();
+
 
 requestAnimationFrame(draw);
