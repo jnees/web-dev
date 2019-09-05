@@ -1,6 +1,12 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
+5. ##[Newsletter-Signup](https://github.com/jnees/web-dev-for-fun/tree/master/Newsletter-Signup)(Node.js Web Application)
+
+An app that allows users to sign up for a newsletter. I don't personally have a newsletter to send out, but now my dog does! This is a live application that is hosted [here on Heroku](https://thawing-peak-68246.herokuapp.com/) that links to MailChimp's API. Feel free to sign up for news about Ginger or copy it for your own project. You will need to add your own api_key and mail list using environmental variables.
+
+This project was made using HTML, CSS, JS/JQUERY, Node, Express, Body-Parser, and Request with the MailChimp API for list management and Heroku for hosting. This app was inspired by a bootcamp project. [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
+
 4. ## [OnePlayerPong](https://github.com/jnees/web-dev-for-fun/tree/master/OnePlayerPong) (browser game)
 
 It's man vs. wall in this updated classic. Use your left/right keys to move the paddle. Collect cash, accrue interest, and shop for upgrades.
