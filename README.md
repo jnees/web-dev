@@ -1,13 +1,13 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-4. ## [OnePlayerPong](https://github.com/jnees/web-dev-for-fun/tree/master/OnePlayerPong)
+4. ## [OnePlayerPong](https://github.com/jnees/web-dev-for-fun/tree/master/OnePlayerPong) (browser game)
 
 It's man vs. wall in this updated classic. Use your left/right keys to move the paddle. Collect cash, accrue interest, and shop for upgrades.
 
 This project uses html/css/bootstrap/js only.
 
-3. ## [Crypto-Converter](https://github.com/jnees/web-dev-for-fun/tree/master/Bitcoin-Ticker)
+3. ## [Crypto-Converter](https://github.com/jnees/web-dev-for-fun/tree/master/Bitcoin-Ticker) (Web-application)
 
 This web app lets you get the latest price quote for Bitcoin/Ethereum/Litecoins and convert to USD/GBP/EUR. Enter the number of coins that you want to convert and select the crypto and fiat currencies that you would like to see.
 
