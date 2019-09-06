@@ -7,17 +7,22 @@ var y = canvas.height + -70;  //center of ball y
 var ballRadius = 10;
 
 // ball movement vars
-var dx = 3.0;
-var dy = -3.0;
+var dx = 4.0;
+var dy = -4.0;
+
+var dxMin = 6.0;
+var dyMin = 6.0;
 
 // paddle draw vars
 paddleHeight = 18;
 paddleWidth = 140;
 paddleX = (canvas.width - paddleWidth)/2;
 paddleGap = 0;
+paddleMaxWidth = canvas.width * 0.65;
 
 // paddle movement
 var paddleDx = 6;
+var paddleMaxDx = 21;
 
 var leftPressed;
 var rightPressed;
@@ -86,8 +91,9 @@ function updateCash(){
 }
 
 // Shopping functions
+
 function buySlow(){
-  if (currentBalance >= 7){
+  if (currentBalance >= 7 && visibleCheckId('s')){
     currentBalance -= 7;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
@@ -97,7 +103,7 @@ function buySlow(){
 }
 
 function buyWiderPaddle() {
-  if (currentBalance >= 5){
+  if (currentBalance >= 5 && visibleCheckId('w')) {
     currentBalance -= 5;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
@@ -106,7 +112,7 @@ function buyWiderPaddle() {
 }
 
 function buyFasterPaddle() {
-  if (currentBalance >= 12){
+  if (currentBalance >= 12 && visibleCheckId('f')){
     currentBalance -= 12;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
@@ -115,13 +121,37 @@ function buyFasterPaddle() {
 }
 
 function buyInterestRate() {
-  if (currentBalance >= 15){
+  if (currentBalance >= 15 && visibleCheckId('t')){
     currentBalance -= 15;
     currentBalance = parseFloat(currentBalance.toFixed(2));
     displayBalance();
     interestRate += 1;
     displayInterest();
   }
+}
+
+function updateInventory() {
+  // Paddle Width
+  if (paddleWidth >= paddleMaxWidth) {
+    hideElementById("w");
+  } else {
+    showElementById("w");
+  }
+
+  // Paddle Speed
+  if (paddleDx >= paddleMaxDx) {
+    hideElementById("f");
+  } else {
+    showElementById("f");
+  }
+
+  // Ball Slow
+  if (Math.abs(dy) <= dyMin && Math.abs(dx) <= dxMin) {
+    hideElementById("s");
+  } else {
+    showElementById("s");
+  }
+
 }
 
 
@@ -143,7 +173,7 @@ function drawPaddle() {
 }
 
 function shrinkPaddle() {
-  if (paddleWidth > 70) {
+  if (paddleWidth > 90) {
     paddleWidth -= 1;
   }
 }
@@ -161,6 +191,22 @@ function flashElementText(ms, element){
   setTimeout(function() {
     document.querySelector(element).style.textShadow = "2px 2px black";
   }, ms);
+}
+
+function hideElementById(id) {
+  document.getElementById(id).style.visibility = "hidden";
+}
+
+function showElementById(id) {
+  document.getElementById(id).style.visibility = "visible";
+}
+
+function visibleCheckId(id){
+  if (document.getElementById(id).style.visibility === "visible") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Game Over
@@ -184,6 +230,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
   drawPaddle();
+  updateInventory();
 
   //Collision Detection: Side Wall => reverse x direction if hit.
   if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
@@ -210,8 +257,8 @@ function draw() {
       scoreUpdate();
 
       // speed up ball
-      dy = dy * 1.05;
-      dx = dx * 1.05;
+      dy = dy * 1.0425;
+      dx = dx * 1.0425;
       console.log(dy);
       console.log(dx);
 
@@ -253,7 +300,7 @@ function draw() {
 var score = 0;
 var scorePossible = true;
 var currentBalance = 0;
-var interestRate = 1;
+var interestRate = 2;
 var totalGoldEarned = 0;
 displayBalance();
 displayInterest();
