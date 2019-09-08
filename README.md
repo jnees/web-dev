@@ -1,7 +1,11 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-5. ## [Newsletter-Signup](https://github.com/jnees/web-dev-for-fun/tree/master/Newsletter-Signup)(Node.js Web Application)
+6. ## [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1)(Node.js/Express Web Application)
+
+This app allows the user to keep a main and a work to-do list in their browser. This is set up to run in a node.js environment and requires express, body-parser, and EJS. Listener is set to port 3000. The main to-do list is at "/" and the work list is at "/work". (HTML/CSS/NODE.JS/Express/EJS).
+
+5. ## [Newsletter-Signup](https://github.com/jnees/web-dev-for-fun/tree/master/Newsletter-Signup)(Node.js/Express Web Application)
 
 An app that allows users to sign up for a newsletter. I don't personally have a newsletter to send out, but now my dog does! This is a live application that is hosted [here on Heroku](https://thawing-peak-68246.herokuapp.com/) that links to MailChimp's API. Feel free to sign up for news about Ginger or copy it for your own project. You will need to add your own api_key and mail list using environmental variables.
 
