@@ -1,7 +1,7 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-6. ## [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1)(Node.js/Express Web Application)
+6. ## [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1) (Node.js/Express Web Application)
 
 This app allows the user to keep a main and a work to-do list in their browser. This is set up to run in a node.js environment and requires express, body-parser, and EJS. Listener is set to port 3000. The main to-do list is at "/" and the work list is at "/work". (HTML/CSS/NODE.JS/Express/EJS).
 
