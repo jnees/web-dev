@@ -3,10 +3,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const _ = require("lodash");
+const _ = require("lodash/string");
 
-const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
-const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
+const aboutContent = "Waistcoat biodiesel coloring book jianbing, pickled fanny pack selvage you probably haven't heard of them typewriter. Man bun listicle palo santo, knausgaard poutine offal tbh sriracha irony chartreuse 3 wolf moon banh mi. Deep v swag taxidermy unicorn. Listicle occupy scenester dreamcatcher viral distillery umami. Semiotics leggings master cleanse polaroid typewriter meh YOLO vinyl tumblr keffiyeh tousled sustainable wayfarers. Squid fixie prism enamel pin four dollar toast paleo letterpress poutine vegan sustainable retro. Keytar typewriter pickled ennui VHS before they sold out semiotics ramps sriracha iPhone organic subway tile woke banh mi irony.";
+const contactContent = "Intelligentsia bitters truffaut, typewriter man bun tumblr actually hella master cleanse gluten-free meggings cliche letterpress edison bulb. Shoreditch tbh live-edge biodiesel godard 90's austin crucifix. Leggings kitsch chambray cold-pressed fam polaroid artisan, copper mug 8-bit vinyl succulents. Fingerstache banjo YOLO, 90's pinterest pabst chia iPhone gochujang austin occupy disrupt craft beer lyft. XOXO chartreuse pork belly four dollar toast 90's pok pok PBR&B affogato health goth portland banh mi lo-fi poutine bicycle rights tumeric.";
 
 const app = express();
 
