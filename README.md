@@ -1,7 +1,7 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-7. ## [Blog Site v1](https://github.com/jnees/web-dev-for-fun/tree/master/ejs-blogsite) (Node.js/Express/ejs blog site.)
+7. ## [Blog Site (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/ejs-blogsite) (Node.js/Express/ejs blog site.)
 
 This web app is a fully functioning blog site. This runs on node.js and requires express/body-parser/ejs. To add a blog post, use the hidden route "/compose". In this app, pages are generated using EJS templating. This was built for a "boss level challenge" in [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/). This project can be upgraded by adding authentication and a database. (HTML/CSS/BOOTSTRAP/NODE.JS/EXPRESS/EJS).
 
