@@ -1,7 +1,7 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
-8. ## [To Do List (Upgraded with MongoDB)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v2)
+8. ## [To Do List (Upgraded with MongoDB)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v2) - (Web App / MongoDB / Node.JS)
 
 This is an upgraded version of [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1). The list now uses MongoDB/Mongoose to store all of the user's custom lists and items. This project is hosted live on [Heroku](https://hidden-temple-80329.herokuapp.com/).
 (HTML/CSS/NODE.JS/Express/EJS/MongoDB/Mongoose/Heroku)
