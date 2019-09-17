@@ -1,6 +1,11 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
+8. ## [To Do List (Upgraded with MongoDB)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v2) - (Web App / MongoDB / Node.JS)
+
+This is an upgraded version of [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1). The list now uses MongoDB/Mongoose to store all of the user's custom lists and items. This project is hosted live on [Heroku](https://hidden-temple-80329.herokuapp.com/).
+(HTML/CSS/NODE.JS/Express/EJS/MongoDB/Mongoose/Heroku)
+
 7. ## [Blog Site (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/ejs-blogsite) (Node.js/Express/ejs Blog Site/Web App)
 
 This web app is a fully functioning blog site. This runs on node.js and requires express/body-parser/ejs. To add a blog post, use the hidden route "/compose". In this app, pages are generated using EJS templating. This was built for a "boss level challenge" in [this Udemy Web-Dev Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/). This project can be upgraded by adding authentication and a database. (HTML/CSS/BOOTSTRAP/NODE.JS/EXPRESS/EJS/lodash).
