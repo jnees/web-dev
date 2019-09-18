@@ -41,8 +41,6 @@ app.get("/:pageNumber([0-9]*)?", function(req, res){
     const pages = Math.ceil(postCount / postsPerPage);
     let firstPost = 0;
 
-    console.log(pageRequested);
-
     firstPost = ((pageRequested - 1) * postsPerPage);  //
     firstPost = firstPost || 0;   // convert root node requests to 0
     const lastPost = firstPost + postsPerPage;
@@ -70,7 +68,6 @@ app.get("/compose", function(req, res){
 });
 
 app.post("/compose", function(req, res){
-  console.log(req.body);
 
   // create new Post object
   const blogPost = new Post ({
@@ -88,12 +85,11 @@ app.post("/compose", function(req, res){
 
 app.get("/posts/:postId", function(req, res) {
 
-  const requestedPostId = req.params.postId;
-  Post.findOne({"_id": requestedPostId}, function(err, post){
-    res.render("post", {
-      postTitle: post.title,
-      postText: post.content
-    });
+  Post.findOne({"_id": req.params.postId}, function(err, post){
+      if (err) {
+        post = { title : "Post Not Found",content: ""};
+      }
+      res.render("post", {post:post});
     }
   );
 });
