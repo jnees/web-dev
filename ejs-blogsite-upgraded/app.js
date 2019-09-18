@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash/string");
 const mongoose = require("mongoose");
+const url = require("url");
 
 mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true, useUnifiedTopology: true }).
   catch(error => console.log(error));
@@ -32,11 +33,28 @@ const Post = mongoose.model("Post", postSchema);
 
 // Routers
 
-app.get("/", function(req, res){
-  Post.find({}, function(err, posts){
-    res.render("home", {allPosts:posts});
-  });
+app.get("/:pageNumber([0-9]*)?", function(req, res){
+  Post.find().collation({locale: "en" }).sort({date: -1}).exec(function(err, posts){
+    const pageRequested = parseInt(req.params.pageNumber);
+    const postCount = posts.length;
+    const postsPerPage = 4;
+    const pages = Math.ceil(postCount / postsPerPage);
+    let firstPost = 0;
 
+    console.log(pageRequested);
+
+    firstPost = ((pageRequested - 1) * postsPerPage);  //
+    firstPost = firstPost || 0;   // convert root node requests to 0
+    const lastPost = firstPost + postsPerPage;
+
+    res.render("home",
+      {
+        allPosts:posts.slice(firstPost, lastPost),
+        postCount:postCount,
+        pages:pages,
+        pageRequested:pageRequested
+      });
+  });
 });
 
 app.get("/about", function(req, res){
@@ -56,7 +74,7 @@ app.post("/compose", function(req, res){
 
   // create new Post object
   const blogPost = new Post ({
-    // "date": Date.now(),
+    "date": Date.now(),
     "title": req.body.postTitle,
     "content": req.body.postText
   });
