@@ -1,6 +1,10 @@
 # web-dev-for-fun
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
+9. ## [REST API starter](https://github.com/jnees/web-dev-for-fun/tree/master/API-starter) (REST API implimentation)
+
+A basic REST API set-up using NODE.JS/Express/MongoDB which allows clients to perform CRUD operations via get/post/put/patch/delete requests. Currently configured for a DB containing just the title and body of articles, but could be easily adapated to other datasets. Includes endpoints for /articles and /articles/<specific_title>. (NODE.JS/Express/MongoDB)
+
 8. ## [To Do List (Upgraded with MongoDB)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v2) - (Web App / MongoDB / Node.JS)
 
 This is an upgraded version of [To Do List (v1)](https://github.com/jnees/web-dev-for-fun/tree/master/todo-list-v1). The list now uses MongoDB/Mongoose to store all of the user's custom lists and items. This project is hosted live on [Heroku](https://hidden-temple-80329.herokuapp.com/).
