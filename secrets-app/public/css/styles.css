@@ -1,0 +1,41 @@
+
+body {
+  background-color:#fab1a0;
+  color: #ff7675;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.btn-light {
+  background-color: #ff7675;
+  border: #ff7675;
+  color: #fff;
+}
+
+.jumbotron {
+  background-color: #fab1a0;
+  color:  #ff7675;
+}
+
+.card {
+  background-color: #fab1a0;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  border: 2px #ff7675 solid;
+}
+
+p {
+  background-color: #fab1a0;
+  color: #fff;
+}
+
+p:nth-child(2n){
+  background-color: #ff7675;
+  color: #fff;
+}
