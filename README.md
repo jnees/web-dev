@@ -1,4 +1,4 @@
-# web-dev-for-fun
+# web-dev-practice
 A collection of web development projects that I've built for practice, tutorials, or just for fun.
 
 9. ## [REST API starter](https://github.com/jnees/web-dev-for-fun/tree/master/API-starter) (REST API implimentation)
